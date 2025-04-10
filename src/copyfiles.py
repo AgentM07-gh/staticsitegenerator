@@ -1,4 +1,3 @@
-from textnode import TextNode, TextType
 from os import path, listdir, mkdir, makedirs
 from shutil import copy, rmtree 
 
@@ -27,11 +26,3 @@ def copy_files(directory):
                 mkdir(dst_dir)
                 file_list.extend(copy_files(item_path))
         return file_list
-
-def main():
-    clean_copy()
-
-
-
-
-main()
