@@ -42,9 +42,9 @@ class ParentNode(HTMLNode):
         super().__init__(tag, None, children, props)
     
     def to_html(self):
-        if self.tag == "":
+        if self.tag is None:
             raise ValueError("Parent Node requires tag argument")
-        elif self.children == []:
+        elif self.children is None:
             raise ValueError("Parent Children cannot be empty")
         else:
             html_str = ""
